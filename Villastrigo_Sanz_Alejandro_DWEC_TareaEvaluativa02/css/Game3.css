@@ -1,0 +1,41 @@
+.nivel-dificil {
+    display: grid;
+    grid-template-columns: repeat(64, 15px);
+    grid-template-rows: repeat(64, 15px);
+    gap: 0px;
+    margin: 20px auto;
+    border: 3px solid #333;
+    background-color: #4EC8A4;
+}
+
+.nivel-dificil .celda {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4EC8A4;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nivel-dificil .pared {
+    background-color: #177C6A;
+}
+
+.nivel-dificil .camino {
+    background-color: #4EC8A4;
+}
+
+.nivel-dificil .meta {
+    background-color: #4caf50; /* Color de la meta */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.nivel-dificil .jugador {
+    background-color: #f44336; /* Color del jugador */
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0 0 8px rgba(244, 67, 54, 0.7);
+}

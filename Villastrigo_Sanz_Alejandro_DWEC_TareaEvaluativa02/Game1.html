@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Maze Runner - Nivel 1</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/Game1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="seleccion_nivel1">
+  <!-- Botón Start -->
+  <button id="start-btn">Start</button>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop muted>  
+  <source src="audio/palabras-perdidas-en-8-bits-263566.mp3" type="audio/mp3">
+  </audio>
+  <div id="laberinto" data-nivel="facil"></div>
+  <div id="gameInfo">
+    <span>Usa las teclas de dirección para mover al jugador.</span>
+  </div>
+  <div id="cuentaRegresiva"></div> <!-- Agregar la cuenta atrás -->
+  <audio id="bg-music" loop autoplay muted>
+    <source src="audio/palabras-perdidas-en-8-bits-263566.mp3" type="audio/mp3">
+  </audio>
+  <!-- Ícono de altavoz -->
+  <i id="audio-toggle" class="fas fa-volume-up"></i>
+  
+  <script src="js/laberintos.js"></script>
+</body>
+</html>

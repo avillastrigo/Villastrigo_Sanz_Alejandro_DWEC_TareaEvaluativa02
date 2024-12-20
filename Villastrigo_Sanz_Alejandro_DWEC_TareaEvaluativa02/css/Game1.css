@@ -1,0 +1,54 @@
+.nivel-facil {
+    display: grid;
+    grid-template-columns: repeat(16, 30px);
+    grid-template-rows: repeat(16, 30px);
+    gap: 0px;
+    margin: 0px auto;
+    border: 3px solid #333;
+    background-color: #FDEE89;
+}
+
+#gameInfo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    z-index: 2; /* Asegura que el texto quede encima de todo */
+    font-family: 'Cinzel', serif;
+}
+
+.nivel-facil .celda {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nivel-facil .pared {
+    background-color: #B7C33D;
+}
+
+.nivel-facil .camino {
+    background-color: #FDEE89;
+}
+
+.nivel-facil .meta {
+    background-color: #4caf50; /* Color de la meta */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.nivel-facil .jugador {
+    background-color: #f44336; /* Color del jugador */
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 0 8px rgba(244, 67, 54, 0.7);
+}
+

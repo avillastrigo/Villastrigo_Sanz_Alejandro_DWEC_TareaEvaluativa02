@@ -1,0 +1,14 @@
+.lta3{
+    background-color: #60C490;
+    color: rgb(0, 0, 0);
+}
+
+.btn3 {
+    background-color: #60C490;
+    color: rgb(0, 0, 0);
+}
+  
+.btn3:hover {
+    background-color: #4DA47A; /* Un tono más oscuro */
+    color: rgb(0, 0, 0);
+}

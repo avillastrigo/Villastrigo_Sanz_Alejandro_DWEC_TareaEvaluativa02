@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Maze Runner - Nivel 2</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/Game2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="seleccion_nivel2">
+  <!-- Botón Start -->
+  <button id="start-btn">Start</button>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop muted>  
+  <source src="audio/pixel-dreams-259187.mp3" type="audio/mp3">
+  </audio>
+  <div id="laberinto" data-nivel="intermedio"></div>
+  <div id="cuentaRegresiva"></div> <!-- Agregar la cuenta atrás -->
+  <!-- Ícono de altavoz -->
+  <i id="audio-toggle" class="fas fa-volume-up"></i>
+  <script src="js/laberintos.js"></script>
+</body>
+</html>

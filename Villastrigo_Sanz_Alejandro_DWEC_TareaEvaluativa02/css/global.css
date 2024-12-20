@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
+
+.form-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6b8e23; /* Verde para simular césped */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para realce */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+.form-container button:hover {
+    background-color: #556b2f; /* Verde más oscuro */
+    transform: translateY(-2px); /* Leve levantamiento */
+  }
+
+.profesor {
+    position: absolute;
+    top: 20px;
+    left: 60px; /* Mover fuera del pergamino */
+    max-width: 150px;
+    text-align: center;
+  }
+  
+.profesor p {
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    margin-top: 1px;
+    font-size: 14px;
+    color: #dd1515;
+    font-weight: bold;
+  }
+
+.texto {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4b2e11;
+    word-wrap: break-word; /* Evita desbordes de palabras */
+}
+
+.palabra{
+  display: inline-block; /* Agrupa cada palabra */
+  white-space: nowrap; /* Evita dividir palabras */
+}
+
+@keyframes escribir {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+.letra {
+    display: inline-block;
+    opacity: 0;
+    animation: escribir 0.5s forwards;
+    white-space: pre; /* Mantiene espacios intactos */
+  }
+  
+.espacio{
+    display: inline-block;
+    opacity: 0;
+    animation: escribir 0.5s forwards;
+  }
+
+/* Estilos comunes */
+body.seleccion_nivel1,
+body.seleccion_nivel2,
+body.seleccion_nivel3 {
+  margin: 0;
+  height: 100vh;
+  position: relative;
+}
+
+body.seleccion_nivel1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/Selva.png") no-repeat center center fixed;
+    background-size: cover;  /* O usa contain si prefieres ajustar la imagen sin recortes */
+    opacity: 0.7;
+    z-index: -1;
+  }
+  
+  body.seleccion_nivel2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/Desierto.png") no-repeat center center fixed;
+    background-size: cover;  /* Ajusta a las necesidades de la imagen */
+    opacity: 0.7;
+    z-index: -1;
+  }
+  
+  body.seleccion_nivel3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/Lago.png") no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+button {
+    position: relative; /* Asegura que los botones estén sobre el pseudo-elemento */
+    z-index: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  
+.selector-contenedor {
+    position: relative;
+    width: 600px; /* El ancho de la imagen */
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Centra las flechas verticalmente */
+    justify-content: space-between; /* Mantiene las flechas a los extremos */
+  }
+  
+.imagen_centro{
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    height: auto;
+    border-radius: 20px;
+  }
+
+.letrero-arriba {
+    position: absolute;
+    font-family: cinzel;
+    font-weight: bolder;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    font-size: 48px;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+  }
+
+.boton-jugar {
+    position: absolute;
+    font-family: cinzel;
+    font-weight: bolder;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    font-size: 48px;
+    text-decoration: none;
+    border-radius: 100px;
+    text-align: center;
+    width: 450px;
+    height: 100px;
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+}
+
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px; /* Ajusta el tamaño de las flechas */
+    height: 150px; /* Ajusta el tamaño de las flechas */
+    cursor: pointer;
+}
+  
+.flecha-izquierda {
+    left: -500px; /* Coloca la flecha a la izquierda */
+}
+  
+.flecha-derecha {
+    right: -500px; /* Coloca la flecha a la derecha */
+}
+
+#cuentaRegresiva {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #333;
+}
+
+.mensaje {
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: justify;
+    overflow: hidden;
+    position: relative;
+}
+
+body.ganaste,
+body.perdiste {
+  margin: 0;
+  height: 100vh;
+  position: relative;
+}
+
+.flecha-salir {
+    right: 0px;
+    top: 900px;
+}
+
+#audio-toggle {
+    font-size: 40px;
+    color: #000000; /* Cambia el color del altavoz */
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+  
+#audio-toggle:hover {
+    color: #838683; /* Cambia el color al pasar el mouse */
+}
+  
+#start-btn {
+    position: fixed;
+    bottom: 20px; /* 20px desde la parte inferior de la pantalla */
+    left: 50%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Ajusta el desplazamiento para que quede perfectamente centrado */
+    padding: 20px 100px;
+    background-color: #000000;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+#start-btn:hover {
+    background-color: #515152;
+}
+  
